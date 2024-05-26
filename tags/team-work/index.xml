@@ -20,5 +20,13 @@
       <description>&lt;p&gt;Using MSP432P401R as the control core, a motion target control and automatic tracking system is designed and fabricated. The system includes a red spot position control system that simulates the motion of the target and a green spot position control system that indicates automatic tracking. The camera is used to identify the red and green lasers and the A4 target paper in the screen, and finally realize the free movement of the red laser system on the screen, the specific trajectory movement on the specific target contour, and the pursuit of the green laser to the red laser. The system has reset and pause functions.&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Four Wheel Car</title>
+      <link>http://localhost:1313/project/four_wheel_car/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/four_wheel_car/</guid>
+      <description>&lt;p&gt;Two four-wheeled carts travel along a line, with the two carts always keeping a certain distance apart, to accomplish various tasks within a certain period of time.&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>
