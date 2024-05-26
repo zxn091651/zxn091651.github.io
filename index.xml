@@ -31,11 +31,33 @@
     </item>
     
     <item>
+      <title>zxn091651.github.io</title>
+      <link>http://localhost:1313/project/zxn091651.github.io/</link>
+      <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/zxn091651.github.io/</guid>
+      <description>&lt;p&gt;Actually it&amp;rsquo;s this website.😋&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Projects</title>
       <link>http://localhost:1313/projects/</link>
       <pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/projects/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Home Service Robot</title>
+      <link>http://localhost:1313/project/home_service_robot/</link>
+      <pubDate>Fri, 17 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/home_service_robot/</guid>
+      <description>&lt;h3 id=&#34;our-works-includes&#34;&gt;Our works includes:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;What is that&lt;/li&gt;
+&lt;li&gt;Receptionist&lt;/li&gt;
+&lt;li&gt;Tidy Up&lt;/li&gt;
+&lt;li&gt;GPSR&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -89,15 +111,7 @@ You can get it by clicking &lt;a href=&#34;https://arxiv.org/abs/2008.01919&#34;
       <link>http://localhost:1313/project/face_blackbox/</link>
       <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/project/face_blackbox/</guid>
-      <description>&lt;p&gt;Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>PyTorch</title>
-      <link>http://localhost:1313/project/pytorch/</link>
-      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/pytorch/</guid>
-      <description>&lt;p&gt;PyTorch is a Python package that provides tensor computation (like NumPy) with strong GPU acceleration.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Using Adversarial Neural Networks to Implement Attacks on Face Recognition Systems with Both Robustness, Migration, High Efficiency and High Accuracy.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -106,6 +120,14 @@ You can get it by clicking &lt;a href=&#34;https://arxiv.org/abs/2008.01919&#34;
       <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/experience/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Motion Control and Tracking Systems</title>
+      <link>http://localhost:1313/project/ticup/</link>
+      <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/ticup/</guid>
+      <description>&lt;p&gt;Using MSP432P401R as the control core, a motion target control and automatic tracking system is designed and fabricated. The system includes a red spot position control system that simulates the motion of the target and a green spot position control system that indicates automatic tracking. The camera is used to identify the red and green lasers and the A4 target paper in the screen, and finally realize the free movement of the red laser system on the screen, the specific trajectory movement on the specific target contour, and the pursuit of the green laser to the red laser. The system has reset and pause functions.&lt;/p&gt;</description>
     </item>
     
     <item>
