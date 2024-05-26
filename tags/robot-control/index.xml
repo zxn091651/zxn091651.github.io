@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Robot Control | Xuning Zheng-An academic trash</title>
-    <link>http://localhost:1313/tags/robot-control/</link>
-      <atom:link href="http://localhost:1313/tags/robot-control/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://zxn091651.github.io/tags/robot-control/</link>
+      <atom:link href="https://zxn091651.github.io/tags/robot-control/index.xml" rel="self" type="application/rss+xml" />
     <description>Robot Control</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 17 May 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/media/icon_hu68170e94a17a2a43d6dcb45cf0e8e589_3079_512x512_fill_lanczos_center_3.png</url>
+      <url>https://zxn091651.github.io/media/icon_hu68170e94a17a2a43d6dcb45cf0e8e589_3079_512x512_fill_lanczos_center_3.png</url>
       <title>Robot Control</title>
-      <link>http://localhost:1313/tags/robot-control/</link>
+      <link>https://zxn091651.github.io/tags/robot-control/</link>
     </image>
     
     <item>
       <title>Home Service Robot</title>
-      <link>http://localhost:1313/project/home_service_robot/</link>
+      <link>https://zxn091651.github.io/project/home_service_robot/</link>
       <pubDate>Fri, 17 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/home_service_robot/</guid>
+      <guid>https://zxn091651.github.io/project/home_service_robot/</guid>
       <description>&lt;h3 id=&#34;our-works-includes&#34;&gt;Our works includes:&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;What is that&lt;/li&gt;
