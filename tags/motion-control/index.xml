@@ -17,7 +17,7 @@
       <link>http://localhost:1313/project/ticup/</link>
       <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/project/ticup/</guid>
-      <description>&lt;p&gt;PyTorch is a Python package that provides tensor computation (like NumPy) with strong GPU acceleration.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Using MSP432P401R as the control core, a motion target control and automatic tracking system is designed and fabricated. The system includes a red spot position control system that simulates the motion of the target and a green spot position control system that indicates automatic tracking. The camera is used to identify the red and green lasers and the A4 target paper in the screen, and finally realize the free movement of the red laser system on the screen, the specific trajectory movement on the specific target contour, and the pursuit of the green laser to the red laser. The system has reset and pause functions.&lt;/p&gt;</description>
     </item>
     
   </channel>

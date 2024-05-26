@@ -17,7 +17,13 @@
       <link>http://localhost:1313/project/home_service_robot/</link>
       <pubDate>Fri, 17 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/project/home_service_robot/</guid>
-      <description>&lt;p&gt;Using MSP432P401R as the control core, a motion target control and automatic tracking system is designed and fabricated. The system includes a red spot position control system that simulates the motion of the target and a green spot position control system that indicates automatic tracking. The camera is used to identify the red and green lasers and the A4 target paper in the screen, and finally realize the free movement of the red laser system on the screen, the specific trajectory movement on the specific target contour, and the pursuit of the green laser to the red laser. The system has reset and pause functions.&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;our-works-includes&#34;&gt;Our works includes:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;What is that&lt;/li&gt;
+&lt;li&gt;Receptionist&lt;/li&gt;
+&lt;li&gt;Tidy Up&lt;/li&gt;
+&lt;li&gt;GPSR&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>
