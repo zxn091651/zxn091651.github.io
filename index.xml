@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Xuning Zheng-An academic trash</title>
-    <link>https://zxn091651.github.io/</link>
-      <atom:link href="https://zxn091651.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/</link>
+      <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <description>Xuning Zheng-An academic trash</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://zxn091651.github.io/media/icon_hu68170e94a17a2a43d6dcb45cf0e8e589_3079_512x512_fill_lanczos_center_3.png</url>
+      <url>http://localhost:1313/media/icon_hu68170e94a17a2a43d6dcb45cf0e8e589_3079_512x512_fill_lanczos_center_3.png</url>
       <title>Xuning Zheng-An academic trash</title>
-      <link>https://zxn091651.github.io/</link>
+      <link>http://localhost:1313/</link>
     </image>
     
     <item>
       <title>🎉 Congrat on the creation of my personal homepage!</title>
-      <link>https://zxn091651.github.io/post/get-started/</link>
+      <link>http://localhost:1313/post/get-started/</link>
       <pubDate>Sun, 26 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://zxn091651.github.io/post/get-started/</guid>
+      <guid>http://localhost:1313/post/get-started/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Welcome&lt;/strong&gt; 👋&lt;/p&gt;
 &lt;h2 id=&#34;what-will-i-do-on-this-website&#34;&gt;What will I do on this website?&lt;/h2&gt;
 &lt;ul&gt;
@@ -32,25 +32,25 @@
     
     <item>
       <title>zxn091651.github.io</title>
-      <link>https://zxn091651.github.io/project/zxn091651.github.io/</link>
+      <link>http://localhost:1313/project/zxn091651.github.io/</link>
       <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://zxn091651.github.io/project/zxn091651.github.io/</guid>
+      <guid>http://localhost:1313/project/zxn091651.github.io/</guid>
       <description>&lt;p&gt;Actually it&amp;rsquo;s this website.😋&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>https://zxn091651.github.io/projects/</link>
+      <link>http://localhost:1313/projects/</link>
       <pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://zxn091651.github.io/projects/</guid>
+      <guid>http://localhost:1313/projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Home Service Robot</title>
-      <link>https://zxn091651.github.io/project/home_service_robot/</link>
+      <link>http://localhost:1313/project/home_service_robot/</link>
       <pubDate>Fri, 17 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://zxn091651.github.io/project/home_service_robot/</guid>
+      <guid>http://localhost:1313/project/home_service_robot/</guid>
       <description>&lt;h3 id=&#34;our-works-includes&#34;&gt;Our works includes:&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;What is that&lt;/li&gt;
@@ -62,9 +62,9 @@
     
     <item>
       <title>FAIC-Attack: An Adversarial Watermarking Attack against Face Age based on Identity Constraint</title>
-      <link>https://zxn091651.github.io/publication/conference-paper/</link>
+      <link>http://localhost:1313/publication/conference-paper/</link>
       <pubDate>Tue, 12 Mar 2024 12:00:00 +0000</pubDate>
-      <guid>https://zxn091651.github.io/publication/conference-paper/</guid>
+      <guid>http://localhost:1313/publication/conference-paper/</guid>
       <description>&lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
 &lt;span class=&#34;pr-3 pt-1 text-primary-600 dark:text-primary-300&#34;&gt;
   &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
@@ -78,9 +78,9 @@ You can get it by clicking &lt;a href=&#34;https://arxiv.org/abs/2008.01919&#34;
     
     <item>
       <title>ICMVA 2024</title>
-      <link>https://zxn091651.github.io/event/example/</link>
+      <link>http://localhost:1313/event/example/</link>
       <pubDate>Tue, 12 Mar 2024 10:00:00 +0000</pubDate>
-      <guid>https://zxn091651.github.io/event/example/</guid>
+      <guid>http://localhost:1313/event/example/</guid>
       <description>&lt;!-- 
 
 
@@ -108,26 +108,34 @@ You can get it by clicking &lt;a href=&#34;https://arxiv.org/abs/2008.01919&#34;
     
     <item>
       <title>Black Box Adversarial Attacks for Face Recognition Systems</title>
-      <link>https://zxn091651.github.io/project/face_blackbox/</link>
+      <link>http://localhost:1313/project/face_blackbox/</link>
       <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://zxn091651.github.io/project/face_blackbox/</guid>
+      <guid>http://localhost:1313/project/face_blackbox/</guid>
       <description>&lt;p&gt;Using Adversarial Neural Networks to Implement Attacks on Face Recognition Systems with Both Robustness, Migration, High Efficiency and High Accuracy.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Experience</title>
-      <link>https://zxn091651.github.io/experience/</link>
+      <link>http://localhost:1313/experience/</link>
       <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://zxn091651.github.io/experience/</guid>
+      <guid>http://localhost:1313/experience/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Motion Control and Tracking Systems</title>
-      <link>https://zxn091651.github.io/project/ticup/</link>
+      <link>http://localhost:1313/project/ticup/</link>
       <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>https://zxn091651.github.io/project/ticup/</guid>
+      <guid>http://localhost:1313/project/ticup/</guid>
       <description>&lt;p&gt;Using MSP432P401R as the control core, a motion target control and automatic tracking system is designed and fabricated. The system includes a red spot position control system that simulates the motion of the target and a green spot position control system that indicates automatic tracking. The camera is used to identify the red and green lasers and the A4 target paper in the screen, and finally realize the free movement of the red laser system on the screen, the specific trajectory movement on the specific target contour, and the pursuit of the green laser to the red laser. The system has reset and pause functions.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Four Wheel Car</title>
+      <link>http://localhost:1313/project/four_wheel_car/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/four_wheel_car/</guid>
+      <description>&lt;p&gt;Two four-wheeled carts travel along a line, with the two carts always keeping a certain distance apart, to accomplish various tasks within a certain period of time.&lt;/p&gt;</description>
     </item>
     
   </channel>
