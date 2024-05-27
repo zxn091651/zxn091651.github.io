@@ -5,7 +5,7 @@
     <link>http://localhost:1313/tags/travelling/</link>
       <atom:link href="http://localhost:1313/tags/travelling/index.xml" rel="self" type="application/rss+xml" />
     <description>Travelling</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 17 May 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/media/icon_hu68170e94a17a2a43d6dcb45cf0e8e589_3079_512x512_fill_lanczos_center_3.png</url>
       <title>Travelling</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Quanzhou</title>
       <link>http://localhost:1313/travel/quanzhou/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 17 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/travel/quanzhou/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Quanzhou&lt;/strong&gt; is actually a nice city for travelling and enjoying. Although the schedule of the competition was nervous, we still enjoyed some local food, which was delicious.😋&lt;/p&gt;
 &lt;!DOCTYPE html&gt;
@@ -78,7 +78,7 @@
 &lt;a href=&#34;pic/9.JPG&#34; data-ngThumb=&#34;pic/9.JPG&#34;&gt;Cool robot&lt;/a&gt;
 &lt;a href=&#34;pic/10.JPG&#34; data-ngThumb=&#34;pic/10.JPG&#34;&gt;Beef hot pot&lt;/a&gt;
 &lt;a href=&#34;pic/11.JPG&#34; data-ngThumb=&#34;pic/11.JPG&#34;&gt;Fish&lt;/a&gt;
-&lt;a href=&#34;pic/Quanzhou.mp4&#34; data-ngThumb=&#34;pic/Quanzhou.mp4&#34;&gt;Cute robot dog&lt;/a&gt;
+&lt;a href=&#34;pic/Quanzhou.mp4&#34; data-ngThumb=&#34;pic/Quanzhou.mp4&#34;&gt;Cute dog robot&lt;/a&gt;
 
 &lt;/div&gt;
 &lt;/body&gt;
@@ -87,11 +87,13 @@
     </item>
     
     <item>
-      <title>Quanzhou</title>
+      <title>Singapore</title>
       <link>http://localhost:1313/travel/singapore/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 12 Mar 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/travel/singapore/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Quanzhou&lt;/strong&gt; is actually a nice city for travelling and enjoying. Although the schedule of the competition was nervous, we still enjoyed some local food, which was delicious.😋&lt;/p&gt;
+      <description>&lt;p&gt;It&amp;rsquo;s my &lt;strong&gt;first time&lt;/strong&gt; to go abroad. Honestly, I was excited and nervous at that time.&lt;/p&gt;
+&lt;p&gt;In addition to attending conferences, I have traveled to many places and experienced the customs of developed countries. It was really an experience of a lifetime.&lt;/p&gt;
+&lt;p&gt;By the way, pork bone tea and stir-fried ox river in spicy soup there is &lt;strong&gt;very delicious&lt;/strong&gt;!😋&lt;/p&gt;
 &lt;!DOCTYPE html&gt;
 &lt;html lang=&#34;en&#34;&gt;
 &lt;head&gt;
@@ -141,18 +143,18 @@
      &#34;viewerGalleryTHeight&#34;: 40
 }&#39;&gt;
     
-&lt;a href=&#34;pic/1.JPG&#34; data-ngThumb=&#34;pic/1.JPG&#34;&gt;Start tour&lt;/a&gt;
-&lt;a href=&#34;pic/2.JPG&#34; data-ngThumb=&#34;pic/2.JPG&#34;&gt;Simple lunch&lt;/a&gt;
-&lt;a href=&#34;pic/3.JPG&#34; data-ngThumb=&#34;pic/3.JPG&#34;&gt;Contest&lt;/a&gt;
-&lt;a href=&#34;pic/4.JPG&#34; data-ngThumb=&#34;pic/4.JPG&#34;&gt;BBQ&lt;/a&gt;
-&lt;a href=&#34;pic/5.JPG&#34; data-ngThumb=&#34;pic/5.JPG&#34;&gt;Our room&lt;/a&gt;
-&lt;a href=&#34;pic/6.JPG&#34; data-ngThumb=&#34;pic/6.JPG&#34;&gt;Shaxian Delicacies&lt;/a&gt;
-&lt;a href=&#34;pic/7.JPG&#34; data-ngThumb=&#34;pic/7.JPG&#34;&gt;Mc&lt;/a&gt;
-&lt;a href=&#34;pic/8.JPG&#34; data-ngThumb=&#34;pic/8.JPG&#34;&gt;Hamburger&lt;/a&gt;
-&lt;a href=&#34;pic/9.JPG&#34; data-ngThumb=&#34;pic/9.JPG&#34;&gt;Cool robot&lt;/a&gt;
-&lt;a href=&#34;pic/10.JPG&#34; data-ngThumb=&#34;pic/10.JPG&#34;&gt;Beef hot pot&lt;/a&gt;
-&lt;a href=&#34;pic/11.JPG&#34; data-ngThumb=&#34;pic/11.JPG&#34;&gt;Fish&lt;/a&gt;
-&lt;a href=&#34;pic/Quanzhou.mp4&#34; data-ngThumb=&#34;pic/Quanzhou.mp4&#34;&gt;Cute robot dog&lt;/a&gt;
+&lt;a href=&#34;pic/1.JPG&#34; data-ngThumb=&#34;pic/1.JPG&#34;&gt;Roomtour&lt;/a&gt;
+&lt;a href=&#34;pic/2.JPG&#34; data-ngThumb=&#34;pic/2.JPG&#34;&gt;Good breakfast&lt;/a&gt;
+&lt;a href=&#34;pic/3.JPG&#34; data-ngThumb=&#34;pic/3.JPG&#34;&gt;Street sign&lt;/a&gt;
+&lt;a href=&#34;pic/4.JPG&#34; data-ngThumb=&#34;pic/4.JPG&#34;&gt;Merlion&lt;/a&gt;
+&lt;a href=&#34;pic/5.JPG&#34; data-ngThumb=&#34;pic/5.JPG&#34;&gt;Gardens by the Bay&lt;/a&gt;
+&lt;a href=&#34;pic/6.JPG&#34; data-ngThumb=&#34;pic/6.JPG&#34;&gt;Gardens by the Bay&lt;/a&gt;
+&lt;a href=&#34;pic/7.JPG&#34; data-ngThumb=&#34;pic/7.JPG&#34;&gt;Orchard RD&lt;/a&gt;
+&lt;a href=&#34;pic/8.JPG&#34; data-ngThumb=&#34;pic/8.JPG&#34;&gt;Chinatown&lt;/a&gt;
+&lt;a href=&#34;pic/9.JPG&#34; data-ngThumb=&#34;pic/9.JPG&#34;&gt;Pork Bone Tea&lt;/a&gt;
+&lt;a href=&#34;pic/10.JPG&#34; data-ngThumb=&#34;pic/10.JPG&#34;&gt;stir-fried ox river in spicy soup&lt;/a&gt;
+&lt;a href=&#34;pic/11.JPG&#34; data-ngThumb=&#34;pic/11.JPG&#34;&gt;Go back&lt;/a&gt;
+&lt;a href=&#34;pic/12.JPG&#34; data-ngThumb=&#34;pic/12.JPG&#34;&gt;Changi Airport&lt;/a&gt;
 
 &lt;/div&gt;
 &lt;/body&gt;
