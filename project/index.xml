@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Xuning Zheng-An academic trash</title>
+    <link>http://localhost:1313/project/</link>
+      <atom:link href="http://localhost:1313/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 25 May 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu68170e94a17a2a43d6dcb45cf0e8e589_3079_512x512_fill_lanczos_center_3.png</url>
+      <title>Projects</title>
+      <link>http://localhost:1313/project/</link>
+    </image>
+    
+    <item>
+      <title>zxn091651.github.io</title>
+      <link>http://localhost:1313/project/zxn091651.github.io/</link>
+      <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/zxn091651.github.io/</guid>
+      <description>&lt;p&gt;Actually it&amp;rsquo;s this website.😋&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Home Service Robot</title>
+      <link>http://localhost:1313/project/home_service_robot/</link>
+      <pubDate>Fri, 17 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/home_service_robot/</guid>
+      <description>&lt;h3 id=&#34;our-works-includes&#34;&gt;Our works includes:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;What is that&lt;/li&gt;
+&lt;li&gt;Receptionist&lt;/li&gt;
+&lt;li&gt;Tidy Up&lt;/li&gt;
+&lt;li&gt;GPSR&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Black Box Adversarial Attacks for Face Recognition Systems</title>
+      <link>http://localhost:1313/project/face_blackbox/</link>
+      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/face_blackbox/</guid>
+      <description>&lt;p&gt;Using Adversarial Neural Networks to Implement Attacks on Face Recognition Systems with Both Robustness, Migration, High Efficiency and High Accuracy.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Motion Control and Tracking Systems</title>
+      <link>http://localhost:1313/project/ticup/</link>
+      <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/ticup/</guid>
+      <description>&lt;p&gt;Using MSP432P401R as the control core, a motion target control and automatic tracking system is designed and fabricated. The system includes a red spot position control system that simulates the motion of the target and a green spot position control system that indicates automatic tracking. The camera is used to identify the red and green lasers and the A4 target paper in the screen, and finally realize the free movement of the red laser system on the screen, the specific trajectory movement on the specific target contour, and the pursuit of the green laser to the red laser. The system has reset and pause functions.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Four Wheel Car</title>
+      <link>http://localhost:1313/project/four_wheel_car/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/four_wheel_car/</guid>
+      <description>&lt;p&gt;Two four-wheeled carts travel along a line, with the two carts always keeping a certain distance apart, to accomplish various tasks within a certain period of time.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

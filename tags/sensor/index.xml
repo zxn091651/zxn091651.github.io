@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sensor | Xuning Zheng-An academic trash</title>
+    <link>http://localhost:1313/tags/sensor/</link>
+      <atom:link href="http://localhost:1313/tags/sensor/index.xml" rel="self" type="application/rss+xml" />
+    <description>Sensor</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 03 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu68170e94a17a2a43d6dcb45cf0e8e589_3079_512x512_fill_lanczos_center_3.png</url>
+      <title>Sensor</title>
+      <link>http://localhost:1313/tags/sensor/</link>
+    </image>
+    
+    <item>
+      <title>Four Wheel Car</title>
+      <link>http://localhost:1313/project/four_wheel_car/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/four_wheel_car/</guid>
+      <description>&lt;p&gt;Two four-wheeled carts travel along a line, with the two carts always keeping a certain distance apart, to accomplish various tasks within a certain period of time.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
