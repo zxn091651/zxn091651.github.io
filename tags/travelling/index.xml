@@ -87,13 +87,15 @@
     </item>
     
     <item>
-      <title>Singapore</title>
+      <title>Anhui</title>
       <link>http://localhost:1313/travel/anhui/</link>
       <pubDate>Tue, 12 Mar 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/travel/anhui/</guid>
-      <description>&lt;p&gt;It&amp;rsquo;s my &lt;strong&gt;first time&lt;/strong&gt; to go abroad. Honestly, I was excited and nervous at that time.&lt;/p&gt;
-&lt;p&gt;In addition to attending conferences, I have traveled to many places and experienced the customs of developed countries. It was really an experience of a lifetime.&lt;/p&gt;
-&lt;p&gt;By the way, pork bone tea and stir-fried ox river in spicy soup there is &lt;strong&gt;very delicious&lt;/strong&gt;!😋&lt;/p&gt;
+      <description>&lt;p&gt;&lt;strong&gt;写在前面：&lt;/strong&gt; 有一说一，在设计这个网站的时候我设置的是en英文环境，之后自然而然地就用英文来写这些板块了。今天突然想到：&lt;/p&gt;
+&lt;h2 id=&#34;所以为什么我不试试中文呢&#34;&gt;所以，为什么我不试试中文呢&lt;/h2&gt;
+&lt;h2 id=&#34;没想到居然能用出乎意料的适配&#34;&gt;没想到居然能用&amp;hellip;出乎意料的适配&lt;/h2&gt;
+&lt;p&gt;❤一开始其实觉得安徽确实有一点点&amp;hellip;平淡无奇，但是直到吃了土菜馆，发现安徽也有安徽的魅力之处。&lt;/p&gt;
+&lt;p&gt;毫不避讳的说，土菜馆就是这次旅程的&lt;strong&gt;点睛之笔&lt;/strong&gt;，值得下次我们专程再去安徽吃一次😋&lt;/p&gt;
 &lt;!DOCTYPE html&gt;
 &lt;html lang=&#34;en&#34;&gt;
 &lt;head&gt;
@@ -143,18 +145,17 @@
      &#34;viewerGalleryTHeight&#34;: 40
 }&#39;&gt;
     
-&lt;a href=&#34;pic/1.JPG&#34; data-ngThumb=&#34;pic/1.JPG&#34;&gt;Roomtour&lt;/a&gt;
-&lt;a href=&#34;pic/2.JPG&#34; data-ngThumb=&#34;pic/2.JPG&#34;&gt;Good breakfast&lt;/a&gt;
-&lt;a href=&#34;pic/3.JPG&#34; data-ngThumb=&#34;pic/3.JPG&#34;&gt;Street sign&lt;/a&gt;
-&lt;a href=&#34;pic/4.JPG&#34; data-ngThumb=&#34;pic/4.JPG&#34;&gt;Merlion&lt;/a&gt;
-&lt;a href=&#34;pic/5.JPG&#34; data-ngThumb=&#34;pic/5.JPG&#34;&gt;Gardens by the Bay&lt;/a&gt;
-&lt;a href=&#34;pic/6.JPG&#34; data-ngThumb=&#34;pic/6.JPG&#34;&gt;Gardens by the Bay&lt;/a&gt;
-&lt;a href=&#34;pic/7.JPG&#34; data-ngThumb=&#34;pic/7.JPG&#34;&gt;Orchard RD&lt;/a&gt;
-&lt;a href=&#34;pic/8.JPG&#34; data-ngThumb=&#34;pic/8.JPG&#34;&gt;Chinatown&lt;/a&gt;
-&lt;a href=&#34;pic/9.JPG&#34; data-ngThumb=&#34;pic/9.JPG&#34;&gt;Pork Bone Tea&lt;/a&gt;
-&lt;a href=&#34;pic/10.JPG&#34; data-ngThumb=&#34;pic/10.JPG&#34;&gt;stir-fried ox river in spicy soup&lt;/a&gt;
+&lt;a href=&#34;pic/1.JPG&#34; data-ngThumb=&#34;pic/1.JPG&#34;&gt;Oil tea breakfast&lt;/a&gt;
+&lt;a href=&#34;pic/2.JPG&#34; data-ngThumb=&#34;pic/2.JPG&#34;&gt;Kawangka milk tea&lt;/a&gt;
+&lt;a href=&#34;pic/3.JPG&#34; data-ngThumb=&#34;pic/3.JPG&#34;&gt;Delicious bread&lt;/a&gt;
+&lt;a href=&#34;pic/4.JPG&#34; data-ngThumb=&#34;pic/4.JPG&#34;&gt;Anhui city&lt;/a&gt;
+&lt;a href=&#34;pic/5.JPG&#34; data-ngThumb=&#34;pic/5.JPG&#34;&gt;Climb&lt;/a&gt;
+&lt;a href=&#34;pic/6.JPG&#34; data-ngThumb=&#34;pic/6.JPG&#34;&gt;烫串&lt;/a&gt;
+&lt;a href=&#34;pic/7.JPG&#34; data-ngThumb=&#34;pic/7.JPG&#34;&gt;Menu&lt;/a&gt;
+&lt;a href=&#34;pic/8.JPG&#34; data-ngThumb=&#34;pic/8.JPG&#34;&gt;肥肠锅&lt;/a&gt;
+&lt;a href=&#34;pic/9.JPG&#34; data-ngThumb=&#34;pic/9.JPG&#34;&gt;炸串&lt;/a&gt;
+&lt;a href=&#34;pic/10.JPG&#34; data-ngThumb=&#34;pic/10.JPG&#34;&gt;Village Lei&lt;/a&gt;
 &lt;a href=&#34;pic/11.JPG&#34; data-ngThumb=&#34;pic/11.JPG&#34;&gt;Go back&lt;/a&gt;
-&lt;a href=&#34;pic/12.JPG&#34; data-ngThumb=&#34;pic/12.JPG&#34;&gt;Changi Airport&lt;/a&gt;
 
 &lt;/div&gt;
 &lt;/body&gt;
