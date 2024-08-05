@@ -41,6 +41,105 @@
     </item>
     
     <item>
+      <title>Tennis Court Registration</title>
+      <link>http://localhost:1313/project/tennis_registration/</link>
+      <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/tennis_registration/</guid>
+      <description>&lt;h1 id=&#34;tennis-registration-v3&#34;&gt;Tennis Registration v3&lt;/h1&gt;
+&lt;h2 id=&#34;prepare-the-environment&#34;&gt;Prepare the environment&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;DeepSORT environment&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd YOLOv9_DeepSORT
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -r requirements.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;YOLOv9 environment&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd yolov9
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -r requirements.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;UI environment (cpp-OpenCV &amp;amp; sysv_ipc)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/wxyczhyza/article/details/128968849&#34;&gt;cpp-OpenCV v4.7.0 in Ubuntu (Here is the tutorial)&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install sysv_ipc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
+&lt;p&gt;You can use the code below to simply run the demo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python tennis_registration.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After running all frames, you will see the result in the terminal. This is the position of every player in the image coordinate.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[[      31.76      8.2214]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; [     22.868      10.646]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; [     11.693      7.4278]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; [     6.3028      9.9999]]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Or if you want to see the result, you can run the ui at the same time.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd ui
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./shr_tennis_ui
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then you will see like the image below.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;result.png&#34; width=&#34;80%&#34;&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;You can use your own params to run the program with the code below.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python tennis_registration.py --video &amp;lt;str&amp;gt; --conf &amp;lt;float 0~1&amp;gt; --blur_id &amp;lt;int&amp;gt; --class_id &amp;lt;int&amp;gt; --cam_id &amp;lt;int&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;params&#34;&gt;Params&lt;/h3&gt;
+&lt;p&gt;If you just simply test its performance in different perspectives, just change its &lt;strong&gt;video&lt;/strong&gt; and &lt;strong&gt;cam_id&lt;/strong&gt; params.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Params&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Function&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Default&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;video&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Path to input video or video stream (input &amp;lsquo;0&amp;rsquo;)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lsquo;./data/video_3.mp4&amp;rsquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;conf&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;confidence threshold&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;blur_id&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;class ID to apply Gaussian Blur&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;class_id&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;class ID to track&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;cam_id&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;camera perspective ID to track&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;supplements&#34;&gt;Supplements&lt;/h3&gt;
+&lt;h4 id=&#34;-stream-mode&#34;&gt;① Stream Mode&lt;/h4&gt;
+&lt;p&gt;If you need to use &lt;strong&gt;Stream Mode&lt;/strong&gt;, pls apply this two code in &lt;strong&gt;tennis_registration.py&lt;/strong&gt; after you connect the camera. Then input &lt;strong&gt;&amp;lsquo;0&amp;rsquo;&lt;/strong&gt; to &lt;strong&gt;video&lt;/strong&gt; param. And don&amp;rsquo;t forget to change &lt;strong&gt;a correct camera index&lt;/strong&gt; to calculate homography matrix. (You can rewrite &lt;strong&gt;cam_dict&lt;/strong&gt; in &lt;strong&gt;object_tracking_stream&lt;/strong&gt; to fix the correspondence between cameras and indexs)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# from YOLOv9_DeepSORT.yolov9.object_tracking_stream import person_track_stream
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# person_track_stream(FLAGS)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Because I cannot connect my computer with cameras in the stadium, I commented them out while debugging the code. (If there are bugs when using Stream Mode, pls contact me&amp;hellip;)&lt;/p&gt;
+&lt;h4 id=&#34;-differences-between-object_tracking_stream-and-object_tracking&#34;&gt;② Differences between object_tracking_stream and object_tracking&lt;/h4&gt;
+&lt;p&gt;The code of video stream is in &lt;strong&gt;object_tracking_stream.py&lt;/strong&gt;, and the code of video file is in &lt;strong&gt;object_tracking.py&lt;/strong&gt;
+They use different methods to get frames: class PYLON_SHM and VideoCapture function in OpenCV.&lt;/p&gt;
+&lt;h4 id=&#34;-video-samples-and-cam_id&#34;&gt;③ Video samples and cam_id&lt;/h4&gt;
+&lt;p&gt;The indexs of videos in the &lt;strong&gt;data&lt;/strong&gt; folder are corresponding to the indexs of cameras.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;video: video_0.mp4 -&amp;gt; cam_id: 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;video: video_1.mp4 -&amp;gt; cam_id: 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;video: video_2.mp4 -&amp;gt; cam_id: 2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;video: video_3.mp4 -&amp;gt; cam_id: 3
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/sujanshresstha/YOLOv9_DeepSORT/tree/main&#34;&gt;YOLOv9_DeepSORT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/qq_42118719/article/details/112347552&#34;&gt;Learn Homography: 相机标定系列（二）单应矩阵&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/wp_bigdata/article/details/119085970&#34;&gt;Homography Applcation: OpenCV-Python单应矩阵（Homography Matrix）应用——更换广告牌&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>zxn091651.github.io</title>
       <link>http://localhost:1313/project/zxn091651.github.io/</link>
       <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>

@@ -41,10 +41,101 @@
   
     
   
-  <meta name="description" content="Using Adversarial Neural Networks to Implement Attacks on Face Recognition Systems with Both Robustness, Migration, High Efficiency and High Accuracy." />
+  <meta name="description" content="Tennis Registration v3
+Prepare the environment
+
+DeepSORT environment
+
+cd YOLOv9_DeepSORT
+pip install -r requirements.txt
+
+YOLOv9 environment
+
+cd yolov9
+pip install -r requirements.txt
+
+UI environment (cpp-OpenCV &amp; sysv_ipc)
+
+cpp-OpenCV v4.7.0 in Ubuntu (Here is the tutorial)
+pip install sysv_ipc
+Demo
+You can use the code below to simply run the demo.
+python tennis_registration.py
+After running all frames, you will see the result in the terminal. This is the position of every player in the image coordinate.
+[[      31.76      8.2214]
+ [     22.868      10.646]
+ [     11.693      7.4278]
+ [     6.3028      9.9999]]
+Or if you want to see the result, you can run the ui at the same time.
+cd ui
+./shr_tennis_ui
+Then you will see like the image below.
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/project/face_blackbox/" />
+
+Usage
+You can use your own params to run the program with the code below.
+python tennis_registration.py --video &lt;str&gt; --conf &lt;float 0~1&gt; --blur_id &lt;int&gt; --class_id &lt;int&gt; --cam_id &lt;int&gt;
+Params
+If you just simply test its performance in different perspectives, just change its video and cam_id params.
+
+
+
+Params
+Function
+Default
+
+
+
+
+video
+Path to input video or video stream (input &lsquo;0&rsquo;)
+&lsquo;./data/video_3.mp4&rsquo;
+
+
+conf
+confidence threshold
+0.50
+
+
+blur_id
+class ID to apply Gaussian Blur
+None
+
+
+class_id
+class ID to track
+0
+
+
+cam_id
+camera perspective ID to track
+3
+
+
+
+Supplements
+① Stream Mode
+If you need to use Stream Mode, pls apply this two code in tennis_registration.py after you connect the camera. Then input &lsquo;0&rsquo; to video param. And don&rsquo;t forget to change a correct camera index to calculate homography matrix. (You can rewrite cam_dict in object_tracking_stream to fix the correspondence between cameras and indexs)
+# from YOLOv9_DeepSORT.yolov9.object_tracking_stream import person_track_stream
+# person_track_stream(FLAGS)
+Because I cannot connect my computer with cameras in the stadium, I commented them out while debugging the code. (If there are bugs when using Stream Mode, pls contact me&hellip;)
+② Differences between object_tracking_stream and object_tracking
+The code of video stream is in object_tracking_stream.py, and the code of video file is in object_tracking.py
+They use different methods to get frames: class PYLON_SHM and VideoCapture function in OpenCV.
+③ Video samples and cam_id
+The indexs of videos in the data folder are corresponding to the indexs of cameras.
+video: video_0.mp4 -&gt; cam_id: 0
+video: video_1.mp4 -&gt; cam_id: 1
+video: video_2.mp4 -&gt; cam_id: 2
+video: video_3.mp4 -&gt; cam_id: 3
+References
+YOLOv9_DeepSORT
+Learn Homography: 相机标定系列（二）单应矩阵
+Homography Applcation: OpenCV-Python单应矩阵（Homography Matrix）应用——更换广告牌" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/project/tennis_registration/" />
 
   
   
@@ -161,7 +252,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hu68170e94a17a2a43d6dcb45cf0e8e589_3079_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu68170e94a17a2a43d6dcb45cf0e8e589_3079_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="http://localhost:1313/project/face_blackbox/" />
+  <link rel="canonical" href="http://localhost:1313/project/tennis_registration/" />
 
   
   
@@ -186,18 +277,109 @@
     <meta property="twitter:creator" content="@GetResearchDev" />
   
   <meta property="og:site_name" content="Xuning Zheng-An academic trash" />
-  <meta property="og:url" content="http://localhost:1313/project/face_blackbox/" />
-  <meta property="og:title" content="Black Box Adversarial Attacks for Face Recognition Systems | Xuning Zheng-An academic trash" />
-  <meta property="og:description" content="Using Adversarial Neural Networks to Implement Attacks on Face Recognition Systems with Both Robustness, Migration, High Efficiency and High Accuracy." /><meta property="og:image" content="http://localhost:1313/project/face_blackbox/featured.jpg" />
-    <meta property="twitter:image" content="http://localhost:1313/project/face_blackbox/featured.jpg" /><meta property="og:locale" content="en-us" />
+  <meta property="og:url" content="http://localhost:1313/project/tennis_registration/" />
+  <meta property="og:title" content="Tennis Court Registration | Xuning Zheng-An academic trash" />
+  <meta property="og:description" content="Tennis Registration v3
+Prepare the environment
+
+DeepSORT environment
+
+cd YOLOv9_DeepSORT
+pip install -r requirements.txt
+
+YOLOv9 environment
+
+cd yolov9
+pip install -r requirements.txt
+
+UI environment (cpp-OpenCV &amp; sysv_ipc)
+
+cpp-OpenCV v4.7.0 in Ubuntu (Here is the tutorial)
+pip install sysv_ipc
+Demo
+You can use the code below to simply run the demo.
+python tennis_registration.py
+After running all frames, you will see the result in the terminal. This is the position of every player in the image coordinate.
+[[      31.76      8.2214]
+ [     22.868      10.646]
+ [     11.693      7.4278]
+ [     6.3028      9.9999]]
+Or if you want to see the result, you can run the ui at the same time.
+cd ui
+./shr_tennis_ui
+Then you will see like the image below.
+
+  
+
+Usage
+You can use your own params to run the program with the code below.
+python tennis_registration.py --video &lt;str&gt; --conf &lt;float 0~1&gt; --blur_id &lt;int&gt; --class_id &lt;int&gt; --cam_id &lt;int&gt;
+Params
+If you just simply test its performance in different perspectives, just change its video and cam_id params.
+
+
+
+Params
+Function
+Default
+
+
+
+
+video
+Path to input video or video stream (input &lsquo;0&rsquo;)
+&lsquo;./data/video_3.mp4&rsquo;
+
+
+conf
+confidence threshold
+0.50
+
+
+blur_id
+class ID to apply Gaussian Blur
+None
+
+
+class_id
+class ID to track
+0
+
+
+cam_id
+camera perspective ID to track
+3
+
+
+
+Supplements
+① Stream Mode
+If you need to use Stream Mode, pls apply this two code in tennis_registration.py after you connect the camera. Then input &lsquo;0&rsquo; to video param. And don&rsquo;t forget to change a correct camera index to calculate homography matrix. (You can rewrite cam_dict in object_tracking_stream to fix the correspondence between cameras and indexs)
+# from YOLOv9_DeepSORT.yolov9.object_tracking_stream import person_track_stream
+# person_track_stream(FLAGS)
+Because I cannot connect my computer with cameras in the stadium, I commented them out while debugging the code. (If there are bugs when using Stream Mode, pls contact me&hellip;)
+② Differences between object_tracking_stream and object_tracking
+The code of video stream is in object_tracking_stream.py, and the code of video file is in object_tracking.py
+They use different methods to get frames: class PYLON_SHM and VideoCapture function in OpenCV.
+③ Video samples and cam_id
+The indexs of videos in the data folder are corresponding to the indexs of cameras.
+video: video_0.mp4 -&gt; cam_id: 0
+video: video_1.mp4 -&gt; cam_id: 1
+video: video_2.mp4 -&gt; cam_id: 2
+video: video_3.mp4 -&gt; cam_id: 3
+References
+YOLOv9_DeepSORT
+Learn Homography: 相机标定系列（二）单应矩阵
+Homography Applcation: OpenCV-Python单应矩阵（Homography Matrix）应用——更换广告牌" /><meta property="og:image" content="http://localhost:1313/project/tennis_registration/featured.jpg" />
+    <meta property="twitter:image" content="http://localhost:1313/project/tennis_registration/featured.jpg" /><meta property="og:locale" content="en-us" />
   
     
       <meta
         property="article:published_time"
-        content="2023-10-26T00:00:00&#43;00:00"
+        content="2024-05-25T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2023-10-26T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2024-05-25T00:00:00&#43;00:00">
   
 
   
@@ -219,16 +401,16 @@
   "@type": "Article",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http://localhost:1313/project/face_blackbox/"
+    "@id": "http://localhost:1313/project/tennis_registration/"
   },
-  "headline": "Black Box Adversarial Attacks for Face Recognition Systems",
+  "headline": "Tennis Court Registration",
   
   "image": [
-    "http://localhost:1313/project/face_blackbox/featured.jpg"
+    "http://localhost:1313/project/tennis_registration/featured.jpg"
   ],
   
-  "datePublished": "2023-10-26T00:00:00Z",
-  "dateModified": "2023-10-26T00:00:00Z",
+  "datePublished": "2024-05-25T00:00:00Z",
+  "dateModified": "2024-05-25T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -243,7 +425,7 @@
       "url": "http://localhost:1313/media/icon_hu68170e94a17a2a43d6dcb45cf0e8e589_3079_192x192_fill_lanczos_center_3.png"
     }
   },
-  "description": "\u003cp\u003eUsing Adversarial Neural Networks to Implement Attacks on Face Recognition Systems with Both Robustness, Migration, High Efficiency and High Accuracy.\u003c/p\u003e"
+  "description": "\u003ch1 id=\"tennis-registration-v3\"\u003eTennis Registration v3\u003c/h1\u003e\n\u003ch2 id=\"prepare-the-environment\"\u003ePrepare the environment\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003eDeepSORT environment\u003c/li\u003e\n\u003c/ol\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-fallback\" data-lang=\"fallback\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003ecd YOLOv9_DeepSORT\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003epip install -r requirements.txt\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003col start=\"2\"\u003e\n\u003cli\u003eYOLOv9 environment\u003c/li\u003e\n\u003c/ol\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-fallback\" data-lang=\"fallback\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003ecd yolov9\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003epip install -r requirements.txt\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003col start=\"3\"\u003e\n\u003cli\u003eUI environment (cpp-OpenCV \u0026amp; sysv_ipc)\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e\u003ca href=\"https://blog.csdn.net/wxyczhyza/article/details/128968849\" target=\"_blank\" rel=\"noopener\"\u003ecpp-OpenCV v4.7.0 in Ubuntu (Here is the tutorial)\u003c/a\u003e\u003c/p\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-fallback\" data-lang=\"fallback\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003epip install sysv_ipc\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003ch2 id=\"demo\"\u003eDemo\u003c/h2\u003e\n\u003cp\u003eYou can use the code below to simply run the demo.\u003c/p\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-fallback\" data-lang=\"fallback\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003epython tennis_registration.py\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003cp\u003eAfter running all frames, you will see the result in the terminal. This is the position of every player in the image coordinate.\u003c/p\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-fallback\" data-lang=\"fallback\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e[[      31.76      8.2214]\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e [     22.868      10.646]\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e [     11.693      7.4278]\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e [     6.3028      9.9999]]\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003cp\u003eOr if you want to see the result, you can run the ui at the same time.\u003c/p\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-fallback\" data-lang=\"fallback\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003ecd ui\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e./shr_tennis_ui\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003cp\u003eThen you will see like the image below.\u003c/p\u003e\n\u003cp align=\"center\"\u003e\r\n  \u003cimg src=\"result.png\" width=\"80%\"\u003e\r\n\u003c/p\u003e\r\n\u003ch2 id=\"usage\"\u003eUsage\u003c/h2\u003e\n\u003cp\u003eYou can use your own params to run the program with the code below.\u003c/p\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-fallback\" data-lang=\"fallback\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003epython tennis_registration.py --video \u0026lt;str\u0026gt; --conf \u0026lt;float 0~1\u0026gt; --blur_id \u0026lt;int\u0026gt; --class_id \u0026lt;int\u0026gt; --cam_id \u0026lt;int\u0026gt;\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003ch3 id=\"params\"\u003eParams\u003c/h3\u003e\n\u003cp\u003eIf you just simply test its performance in different perspectives, just change its \u003cstrong\u003evideo\u003c/strong\u003e and \u003cstrong\u003ecam_id\u003c/strong\u003e params.\u003c/p\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth style=\"text-align:center\"\u003eParams\u003c/th\u003e\n\u003cth style=\"text-align:center\"\u003eFunction\u003c/th\u003e\n\u003cth style=\"text-align:center\"\u003eDefault\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:center\"\u003evideo\u003c/td\u003e\n\u003ctd style=\"text-align:center\"\u003ePath to input video or video stream (input \u0026lsquo;0\u0026rsquo;)\u003c/td\u003e\n\u003ctd style=\"text-align:center\"\u003e\u0026lsquo;./data/video_3.mp4\u0026rsquo;\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:center\"\u003econf\u003c/td\u003e\n\u003ctd style=\"text-align:center\"\u003econfidence threshold\u003c/td\u003e\n\u003ctd style=\"text-align:center\"\u003e0.50\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:center\"\u003eblur_id\u003c/td\u003e\n\u003ctd style=\"text-align:center\"\u003eclass ID to apply Gaussian Blur\u003c/td\u003e\n\u003ctd style=\"text-align:center\"\u003eNone\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:center\"\u003eclass_id\u003c/td\u003e\n\u003ctd style=\"text-align:center\"\u003eclass ID to track\u003c/td\u003e\n\u003ctd style=\"text-align:center\"\u003e0\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:center\"\u003ecam_id\u003c/td\u003e\n\u003ctd style=\"text-align:center\"\u003ecamera perspective ID to track\u003c/td\u003e\n\u003ctd style=\"text-align:center\"\u003e3\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\n\u003c/table\u003e\n\u003ch3 id=\"supplements\"\u003eSupplements\u003c/h3\u003e\n\u003ch4 id=\"-stream-mode\"\u003e① Stream Mode\u003c/h4\u003e\n\u003cp\u003eIf you need to use \u003cstrong\u003eStream Mode\u003c/strong\u003e, pls apply this two code in \u003cstrong\u003etennis_registration.py\u003c/strong\u003e after you connect the camera. Then input \u003cstrong\u003e\u0026lsquo;0\u0026rsquo;\u003c/strong\u003e to \u003cstrong\u003evideo\u003c/strong\u003e param. And don\u0026rsquo;t forget to change \u003cstrong\u003ea correct camera index\u003c/strong\u003e to calculate homography matrix. (You can rewrite \u003cstrong\u003ecam_dict\u003c/strong\u003e in \u003cstrong\u003eobject_tracking_stream\u003c/strong\u003e to fix the correspondence between cameras and indexs)\u003c/p\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-fallback\" data-lang=\"fallback\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e# from YOLOv9_DeepSORT.yolov9.object_tracking_stream import person_track_stream\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-fallback\" data-lang=\"fallback\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e# person_track_stream(FLAGS)\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003cp\u003eBecause I cannot connect my computer with cameras in the stadium, I commented them out while debugging the code. (If there are bugs when using Stream Mode, pls contact me\u0026hellip;)\u003c/p\u003e\n\u003ch4 id=\"-differences-between-object_tracking_stream-and-object_tracking\"\u003e② Differences between object_tracking_stream and object_tracking\u003c/h4\u003e\n\u003cp\u003eThe code of video stream is in \u003cstrong\u003eobject_tracking_stream.py\u003c/strong\u003e, and the code of video file is in \u003cstrong\u003eobject_tracking.py\u003c/strong\u003e\nThey use different methods to get frames: class PYLON_SHM and VideoCapture function in OpenCV.\u003c/p\u003e\n\u003ch4 id=\"-video-samples-and-cam_id\"\u003e③ Video samples and cam_id\u003c/h4\u003e\n\u003cp\u003eThe indexs of videos in the \u003cstrong\u003edata\u003c/strong\u003e folder are corresponding to the indexs of cameras.\u003c/p\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-fallback\" data-lang=\"fallback\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003evideo: video_0.mp4 -\u0026gt; cam_id: 0\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003evideo: video_1.mp4 -\u0026gt; cam_id: 1\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003evideo: video_2.mp4 -\u0026gt; cam_id: 2\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003evideo: video_3.mp4 -\u0026gt; cam_id: 3\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003ch2 id=\"references\"\u003eReferences\u003c/h2\u003e\n\u003cp\u003e\u003ca href=\"https://github.com/sujanshresstha/YOLOv9_DeepSORT/tree/main\" target=\"_blank\" rel=\"noopener\"\u003eYOLOv9_DeepSORT\u003c/a\u003e\u003c/p\u003e\n\u003cp\u003e\u003ca href=\"https://blog.csdn.net/qq_42118719/article/details/112347552\" target=\"_blank\" rel=\"noopener\"\u003eLearn Homography: 相机标定系列（二）单应矩阵\u003c/a\u003e\u003c/p\u003e\n\u003cp\u003e\u003ca href=\"https://blog.csdn.net/wp_bigdata/article/details/119085970\" target=\"_blank\" rel=\"noopener\"\u003eHomography Applcation: OpenCV-Python单应矩阵（Homography Matrix）应用——更换广告牌\u003c/a\u003e\u003c/p\u003e"
 }
 </script>
 
@@ -252,7 +434,7 @@
   
 
 
-  <title>Black Box Adversarial Attacks for Face Recognition Systems | Xuning Zheng-An academic trash</title>
+  <title>Tennis Court Registration | Xuning Zheng-An academic trash</title>
 
   
   
@@ -918,13 +1100,40 @@
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
         </span>
     </a><div class="ltr:pr-0 overflow-hidden">
-        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+        <ul class="hb-sidebar-list"><li class="flex flex-col open"><a
     class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/project/tennis_registration/"
     
   >Tennis Court Registration
     </a>
+  
+    <ul class="hb-sidebar-mobile-toc"><li>
+              <a
+                href="#prepare-the-environment"
+                class="hb-docs-link"
+              >Prepare the environment</a>
+            </li>
+          <li>
+              <a
+                href="#demo"
+                class="hb-docs-link"
+              >Demo</a>
+            </li>
+          <li>
+              <a
+                href="#usage"
+                class="hb-docs-link"
+              >Usage</a>
+            </li>
+          <li>
+              <a
+                href="#references"
+                class="hb-docs-link"
+              >References</a>
+            </li>
+          </ul>
+  
               
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
@@ -942,14 +1151,13 @@
   >Home Service Robot
     </a>
               
-            </li><li class="flex flex-col open"><a
+            </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
-      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/project/face_blackbox/"
     
   >Black Box Adversarial Attacks for Face Recognition Systems
     </a>
-  
               
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
@@ -1079,7 +1287,34 @@
 
 
 
-  <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4">
+  <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#prepare-the-environment">Prepare the environment</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#demo">Demo</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#usage">Usage</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#params">Params</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#supplements">Supplements</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-stream-mode">① Stream Mode</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-differences-between-object_tracking_stream-and-object_tracking">② Differences between object_tracking_stream and object_tracking</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-video-samples-and-cam_id">③ Video samples and cam_id</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#references">References</a>
+      </li></ul>
 
 
 
@@ -1106,16 +1341,16 @@
 
       
 
-      <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Black Box Adversarial Attacks for Face Recognition Systems</h1>
+      <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Tennis Court Registration</h1>
 
       <div class="mt-4 mb-16">
-      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class="mr-1">Oct 26, 2023</span>
+      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class="mr-1">May 25, 2024</span>
         
 
         
         <span class="mx-1">·</span>
         <span class="mx-1">
-          1 min read
+          2 min read
         </span>
         
         </div>
@@ -1148,9 +1383,9 @@
       
       
       
-      <div class="article-header article-container featured-image-wrapper mt-4 mb-16" style="max-width: 519px; max-height: 412px;">
+      <div class="article-header article-container featured-image-wrapper mt-4 mb-16" style="max-width: 720px; max-height: 332px;">
         <div style="position: relative">
-          <img src="/project/face_blackbox/featured_hufd1e2e84ec2680ed96a9d520087878cc_40342_4550e71ad844b1ca076790ab5fb707cf.webp" width="519" height="412" alt="" class="featured-image">
+          <img src="/project/tennis_registration/featured_hu2219dfe8bddf1cf588a2c426dc6bc116_278760_7941406de6e1983c1666f5a821ad4836.webp" width="720" height="332" alt="" class="featured-image">
           
         </div>
       </div>
@@ -1160,13 +1395,104 @@
       
 
       <div class="prose prose-slate lg:prose-xl dark:prose-invert">
-        <p>Using Adversarial Neural Networks to Implement Attacks on Face Recognition Systems with Both Robustness, Migration, High Efficiency and High Accuracy.</p>
+        <h1 id="tennis-registration-v3">Tennis Registration v3</h1>
+<h2 id="prepare-the-environment">Prepare the environment</h2>
+<ol>
+<li>DeepSORT environment</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd YOLOv9_DeepSORT
+</span></span><span class="line"><span class="cl">pip install -r requirements.txt
+</span></span></code></pre></div><ol start="2">
+<li>YOLOv9 environment</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd yolov9
+</span></span><span class="line"><span class="cl">pip install -r requirements.txt
+</span></span></code></pre></div><ol start="3">
+<li>UI environment (cpp-OpenCV &amp; sysv_ipc)</li>
+</ol>
+<p><a href="https://blog.csdn.net/wxyczhyza/article/details/128968849" target="_blank" rel="noopener">cpp-OpenCV v4.7.0 in Ubuntu (Here is the tutorial)</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pip install sysv_ipc
+</span></span></code></pre></div><h2 id="demo">Demo</h2>
+<p>You can use the code below to simply run the demo.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">python tennis_registration.py
+</span></span></code></pre></div><p>After running all frames, you will see the result in the terminal. This is the position of every player in the image coordinate.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[[      31.76      8.2214]
+</span></span><span class="line"><span class="cl"> [     22.868      10.646]
+</span></span><span class="line"><span class="cl"> [     11.693      7.4278]
+</span></span><span class="line"><span class="cl"> [     6.3028      9.9999]]
+</span></span></code></pre></div><p>Or if you want to see the result, you can run the ui at the same time.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd ui
+</span></span><span class="line"><span class="cl">./shr_tennis_ui
+</span></span></code></pre></div><p>Then you will see like the image below.</p>
+<p align="center">
+  <img src="result.png" width="80%">
+</p>
+<h2 id="usage">Usage</h2>
+<p>You can use your own params to run the program with the code below.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">python tennis_registration.py --video &lt;str&gt; --conf &lt;float 0~1&gt; --blur_id &lt;int&gt; --class_id &lt;int&gt; --cam_id &lt;int&gt;
+</span></span></code></pre></div><h3 id="params">Params</h3>
+<p>If you just simply test its performance in different perspectives, just change its <strong>video</strong> and <strong>cam_id</strong> params.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Params</th>
+<th style="text-align:center">Function</th>
+<th style="text-align:center">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">video</td>
+<td style="text-align:center">Path to input video or video stream (input &lsquo;0&rsquo;)</td>
+<td style="text-align:center">&lsquo;./data/video_3.mp4&rsquo;</td>
+</tr>
+<tr>
+<td style="text-align:center">conf</td>
+<td style="text-align:center">confidence threshold</td>
+<td style="text-align:center">0.50</td>
+</tr>
+<tr>
+<td style="text-align:center">blur_id</td>
+<td style="text-align:center">class ID to apply Gaussian Blur</td>
+<td style="text-align:center">None</td>
+</tr>
+<tr>
+<td style="text-align:center">class_id</td>
+<td style="text-align:center">class ID to track</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">cam_id</td>
+<td style="text-align:center">camera perspective ID to track</td>
+<td style="text-align:center">3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="supplements">Supplements</h3>
+<h4 id="-stream-mode">① Stream Mode</h4>
+<p>If you need to use <strong>Stream Mode</strong>, pls apply this two code in <strong>tennis_registration.py</strong> after you connect the camera. Then input <strong>&lsquo;0&rsquo;</strong> to <strong>video</strong> param. And don&rsquo;t forget to change <strong>a correct camera index</strong> to calculate homography matrix. (You can rewrite <strong>cam_dict</strong> in <strong>object_tracking_stream</strong> to fix the correspondence between cameras and indexs)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># from YOLOv9_DeepSORT.yolov9.object_tracking_stream import person_track_stream
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># person_track_stream(FLAGS)
+</span></span></code></pre></div><p>Because I cannot connect my computer with cameras in the stadium, I commented them out while debugging the code. (If there are bugs when using Stream Mode, pls contact me&hellip;)</p>
+<h4 id="-differences-between-object_tracking_stream-and-object_tracking">② Differences between object_tracking_stream and object_tracking</h4>
+<p>The code of video stream is in <strong>object_tracking_stream.py</strong>, and the code of video file is in <strong>object_tracking.py</strong>
+They use different methods to get frames: class PYLON_SHM and VideoCapture function in OpenCV.</p>
+<h4 id="-video-samples-and-cam_id">③ Video samples and cam_id</h4>
+<p>The indexs of videos in the <strong>data</strong> folder are corresponding to the indexs of cameras.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">video: video_0.mp4 -&gt; cam_id: 0
+</span></span><span class="line"><span class="cl">video: video_1.mp4 -&gt; cam_id: 1
+</span></span><span class="line"><span class="cl">video: video_2.mp4 -&gt; cam_id: 2
+</span></span><span class="line"><span class="cl">video: video_3.mp4 -&gt; cam_id: 3
+</span></span></code></pre></div><h2 id="references">References</h2>
+<p><a href="https://github.com/sujanshresstha/YOLOv9_DeepSORT/tree/main" target="_blank" rel="noopener">YOLOv9_DeepSORT</a></p>
+<p><a href="https://blog.csdn.net/qq_42118719/article/details/112347552" target="_blank" rel="noopener">Learn Homography: 相机标定系列（二）单应矩阵</a></p>
+<p><a href="https://blog.csdn.net/wp_bigdata/article/details/119085970" target="_blank" rel="noopener">Homography Applcation: OpenCV-Python单应矩阵（Homography Matrix）应用——更换广告牌</a></p>
       </div>
 
       
-  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2023-10-26T00:00:00.000Z">
+  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2024-05-25T00:00:00.000Z">
     <span>Last updated on</span>
-    Oct 26, 2023</time>
+    May 25, 2024</time>
 
       <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
         
@@ -1178,11 +1504,7 @@
 
 <div class="flex justify-center">
   
-  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/tags/adversarial-neural-networks/">Adversarial Neural Networks</a>
-  
-  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/tags/face-recognition-systems/">Face Recognition Systems</a>
-  
-  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/tags/watermark/">Watermark</a>
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/tags/tennis-court-registration/">Tennis Court Registration</a>
   
 </div>
 
@@ -1200,7 +1522,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fface_blackbox%2F&amp;text=Black&#43;Box&#43;Adversarial&#43;Attacks&#43;for&#43;Face&#43;Recognition&#43;Systems"
+    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Ftennis_registration%2F&amp;text=Tennis&#43;Court&#43;Registration"
     title="X"
     aria-label="X"
     id="share-link-x"
@@ -1218,7 +1540,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fface_blackbox%2F&amp;t=Black&#43;Box&#43;Adversarial&#43;Attacks&#43;for&#43;Face&#43;Recognition&#43;Systems"
+    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Ftennis_registration%2F&amp;t=Tennis&#43;Court&#43;Registration"
     title="Facebook"
     aria-label="Facebook"
     id="share-link-facebook"
@@ -1238,7 +1560,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="mailto:?subject=Black%20Box%20Adversarial%20Attacks%20for%20Face%20Recognition%20Systems&amp;body=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fface_blackbox%2F"
+    href="mailto:?subject=Tennis%20Court%20Registration&amp;body=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Ftennis_registration%2F"
     title="Email"
     aria-label="Email"
     id="share-link-email"
@@ -1256,7 +1578,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fface_blackbox%2F&amp;title=Black&#43;Box&#43;Adversarial&#43;Attacks&#43;for&#43;Face&#43;Recognition&#43;Systems"
+    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Ftennis_registration%2F&amp;title=Tennis&#43;Court&#43;Registration"
     title="LinkedIn"
     aria-label="LinkedIn"
     id="share-link-linkedin"
@@ -1274,7 +1596,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="whatsapp://send?text=Black&#43;Box&#43;Adversarial&#43;Attacks&#43;for&#43;Face&#43;Recognition&#43;Systems%20http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fface_blackbox%2F"
+    href="whatsapp://send?text=Tennis&#43;Court&#43;Registration%20http%3A%2F%2Flocalhost%3A1313%2Fproject%2Ftennis_registration%2F"
     title="WhatsApp"
     aria-label="WhatsApp"
     id="share-link-whatsapp"
@@ -1410,34 +1732,18 @@
   <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
     <div class="">
       
-        <a class="group flex no-underline" href="/project/home_service_robot/">
-          <span
-            class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
-          ><span class="ltr:inline rtl:hidden">&larr;</span></span>
-          <span class="flex flex-col">
-            <span
-              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >Home Service Robot</span>
-            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-              
-                May 17, 2024
-              
-            </span>
-          </span>
-        </a>
-      
     </div>
     <div class="">
       
-        <a class="group flex text-right no-underline" href="/project/ticup/">
+        <a class="group flex text-right no-underline" href="/project/zxn091651.github.io/">
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >Motion Control and Tracking Systems</span
+            >zxn091651.github.io</span
             >
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
-                Jul 10, 2023
+                May 25, 2024
               
             </span>
           </span>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects | Xuning Zheng-An academic trash</title>
-    <link>http://localhost:1313/project/</link>
-      <atom:link href="http://localhost:1313/project/index.xml" rel="self" type="application/rss+xml" />
-    <description>Projects</description>
+    <title>Tennis Court Registration | Xuning Zheng-An academic trash</title>
+    <link>http://localhost:1313/tags/tennis-court-registration/</link>
+      <atom:link href="http://localhost:1313/tags/tennis-court-registration/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tennis Court Registration</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 25 May 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/media/icon_hu68170e94a17a2a43d6dcb45cf0e8e589_3079_512x512_fill_lanczos_center_3.png</url>
-      <title>Projects</title>
-      <link>http://localhost:1313/project/</link>
+      <title>Tennis Court Registration</title>
+      <link>http://localhost:1313/tags/tennis-court-registration/</link>
     </image>
     
     <item>
@@ -47,7 +47,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./shr_tennis_ui
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then you will see like the image below.&lt;/p&gt;
 &lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;result.png&#34; width=&#34;80%&#34;&gt;
+  &lt;img src=&#34;data/result.png&#34; width=&#34;80%&#34;&gt;
 &lt;/p&gt;
 &lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
 &lt;p&gt;You can use your own params to run the program with the code below.&lt;/p&gt;
@@ -91,16 +91,13 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h3 id=&#34;supplements&#34;&gt;Supplements&lt;/h3&gt;
-&lt;h4 id=&#34;-stream-mode&#34;&gt;① Stream Mode&lt;/h4&gt;
-&lt;p&gt;If you need to use &lt;strong&gt;Stream Mode&lt;/strong&gt;, pls apply this two code in &lt;strong&gt;tennis_registration.py&lt;/strong&gt; after you connect the camera. Then input &lt;strong&gt;&amp;lsquo;0&amp;rsquo;&lt;/strong&gt; to &lt;strong&gt;video&lt;/strong&gt; param. And don&amp;rsquo;t forget to change &lt;strong&gt;a correct camera index&lt;/strong&gt; to calculate homography matrix. (You can rewrite &lt;strong&gt;cam_dict&lt;/strong&gt; in &lt;strong&gt;object_tracking_stream&lt;/strong&gt; to fix the correspondence between cameras and indexs)&lt;/p&gt;
+&lt;h4 id=&#34;-if-you-need-to-use-stream-mode-pls-apply-this-two-code-in-tennis_registrationpy-after-you-connect-the-camera-then-input-0-to-video-param-and-dont-forget-to-change-a-correct-camera-index-to-calculate-homography-matrix-you-can-rewrite-cam_dict-in-object_tracking_stream-to-fix-the-correspondence-between-cameras-and-indexs&#34;&gt;① If you need to use &lt;strong&gt;Stream Mode&lt;/strong&gt;, pls apply this two code in &lt;strong&gt;tennis_registration.py&lt;/strong&gt; after you connect the camera. Then input &lt;strong&gt;&amp;lsquo;0&amp;rsquo;&lt;/strong&gt; to &lt;strong&gt;video&lt;/strong&gt; param. And don&amp;rsquo;t forget to change &lt;strong&gt;a correct camera index&lt;/strong&gt; to calculate homography matrix. (You can rewrite &lt;strong&gt;cam_dict&lt;/strong&gt; in &lt;strong&gt;object_tracking_stream&lt;/strong&gt; to fix the correspondence between cameras and indexs)&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# from YOLOv9_DeepSORT.yolov9.object_tracking_stream import person_track_stream
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# person_track_stream(FLAGS)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Because I cannot connect my computer with cameras in the stadium, I commented them out while debugging the code. (If there are bugs when using Stream Mode, pls contact me&amp;hellip;)&lt;/p&gt;
-&lt;h4 id=&#34;-differences-between-object_tracking_stream-and-object_tracking&#34;&gt;② Differences between object_tracking_stream and object_tracking&lt;/h4&gt;
-&lt;p&gt;The code of video stream is in &lt;strong&gt;object_tracking_stream.py&lt;/strong&gt;, and the code of video file is in &lt;strong&gt;object_tracking.py&lt;/strong&gt;
-They use different methods to get frames: class PYLON_SHM and VideoCapture function in OpenCV.&lt;/p&gt;
-&lt;h4 id=&#34;-video-samples-and-cam_id&#34;&gt;③ Video samples and cam_id&lt;/h4&gt;
-&lt;p&gt;The indexs of videos in the &lt;strong&gt;data&lt;/strong&gt; folder are corresponding to the indexs of cameras.&lt;/p&gt;
+&lt;h4 id=&#34;-the-code-of-video-stream-is-in-object_tracking_streampy-and-the-code-of-video-file-is-in-object_trackingpy&#34;&gt;② The code of video stream is in &lt;strong&gt;object_tracking_stream.py&lt;/strong&gt;, and the code of video file is in &lt;strong&gt;object_tracking.py&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;They use different methods to get frames: class PYLON_SHM and VideoCapture function in OpenCV.&lt;/p&gt;
+&lt;h4 id=&#34;-the-indexs-of-videos-in-the-data-folder-are-corresponding-to-the-indexs-of-cameras&#34;&gt;③ The indexs of videos in the &lt;strong&gt;data&lt;/strong&gt; folder are corresponding to the indexs of cameras.&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;video: video_0.mp4 -&amp;gt; cam_id: 0
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;video: video_1.mp4 -&amp;gt; cam_id: 1
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;video: video_2.mp4 -&amp;gt; cam_id: 2
@@ -109,52 +106,6 @@ They use different methods to get frames: class PYLON_SHM and VideoCapture funct
 &lt;p&gt;&lt;a href=&#34;https://github.com/sujanshresstha/YOLOv9_DeepSORT/tree/main&#34;&gt;YOLOv9_DeepSORT&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/qq_42118719/article/details/112347552&#34;&gt;Learn Homography: 相机标定系列（二）单应矩阵&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/wp_bigdata/article/details/119085970&#34;&gt;Homography Applcation: OpenCV-Python单应矩阵（Homography Matrix）应用——更换广告牌&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>zxn091651.github.io</title>
-      <link>http://localhost:1313/project/zxn091651.github.io/</link>
-      <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/zxn091651.github.io/</guid>
-      <description>&lt;p&gt;Actually it&amp;rsquo;s this website.😋&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Home Service Robot</title>
-      <link>http://localhost:1313/project/home_service_robot/</link>
-      <pubDate>Fri, 17 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/home_service_robot/</guid>
-      <description>&lt;h3 id=&#34;our-works-includes&#34;&gt;Our works includes:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;What is that&lt;/li&gt;
-&lt;li&gt;Receptionist&lt;/li&gt;
-&lt;li&gt;Tidy Up&lt;/li&gt;
-&lt;li&gt;GPSR&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Black Box Adversarial Attacks for Face Recognition Systems</title>
-      <link>http://localhost:1313/project/face_blackbox/</link>
-      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/face_blackbox/</guid>
-      <description>&lt;p&gt;Using Adversarial Neural Networks to Implement Attacks on Face Recognition Systems with Both Robustness, Migration, High Efficiency and High Accuracy.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Motion Control and Tracking Systems</title>
-      <link>http://localhost:1313/project/ticup/</link>
-      <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/ticup/</guid>
-      <description>&lt;p&gt;Using MSP432P401R as the control core, a motion target control and automatic tracking system is designed and fabricated. The system includes a red spot position control system that simulates the motion of the target and a green spot position control system that indicates automatic tracking. The camera is used to identify the red and green lasers and the A4 target paper in the screen, and finally realize the free movement of the red laser system on the screen, the specific trajectory movement on the specific target contour, and the pursuit of the green laser to the red laser. The system has reset and pause functions.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Four Wheel Car</title>
-      <link>http://localhost:1313/project/four_wheel_car/</link>
-      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/four_wheel_car/</guid>
-      <description>&lt;p&gt;Two four-wheeled carts travel along a line, with the two carts always keeping a certain distance apart, to accomplish various tasks within a certain period of time.&lt;/p&gt;</description>
     </item>
     
   </channel>
